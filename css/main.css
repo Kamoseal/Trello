@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+nav{
+  background-color: #147aa7;
+  height: 50px;
+  display: inline-block;
+  width: 100%;
+}
+li{
+  font-size: 15px;
+  display: inline-block;
+  list-style: none;
+  padding: 3px;
+}
+#main-child{
+  background-color: #1d8dc2;
+  height: 585px;
+  margin-top: -18px;
+  padding: 0;
+  width: 100%;
+}
+.main-left{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.tableros{
+  background-color: #68a3c4;
+  border: none;
+  border-radius: 5%;
+  height: 30px;
+}
+.tableros-img-text{
+  font-size: 15px;
+  font-weight: 550;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.main-search{
+  background-color: #68a3c4;
+  border: none;
+  border-radius: 5%;
+  height: 30px;
+  padding: 0;
+}
+.title-trello{
+  margin-top: -35px;
+  text-align: center;
+}
+.main-rigth{
+  float: right;
+  margin-top: -50px;
+  margin-left: -30px;
+}
+.main-child-left{
+  margin: 16px 1px;
+  padding: 3px;
+}
+.name-tablero{
+  font-size: 20px;
+  font-weight: 600;
+  padding-right: 15px;
+}
+.main-child-righ{
+  float: right;
+  text-decoration: underline;
+}
+nav .main-rigth button{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  padding-left: 5px;
+}
+nav section button a img{
+  padding-right: 5px;
+  margin: 0;
+}
+main ul li a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
