@@ -51,8 +51,15 @@ li{
 .main-search{
   background-color: #68a3c4;
   border: none;
-  border-radius: 5%;
   height: 30px;
+  padding: 0;
+}
+.button-search{
+  background-color: #68a3c4;
+  border: none;
+  border-radius: 10%;
+  height: 30px;
+  margin: 0;
   padding: 0;
 }
 .title-trello{
@@ -62,8 +69,9 @@ li{
 /*posicionamiento margenes de botones de usabilidad*/
 .main-rigth{
   float: right;
-  margin-top: -30px;
+  margin-top: -50px;
   margin-left: -30px;
+  clear: none;
 }
 /*posicionamiento lista*/
 .main-child-left{
@@ -94,18 +102,32 @@ li{
 }
 /*posicionamiento de botones en barra de navegacion*/
 nav .main-rigth button{
+  background: #4D96BB;
+  border: none;
+  border-radius: 5px;
   display: inline-block;
   height: 30px;
   width: 30px;
-  padding-left: 5px;
 }
 /* decoracion y posicionamiento de imagen dentro del botón en barra de navegación*/
-nav section button a img{
-  padding-right: 5px;
+nav section button a{
+  color: white;
+  height: 23px;
   margin: 0;
+  text-decoration: none;
+  width: 22px;
 }
 /*decoracion de link*/
 main ul li a{
   color: #FFFFFF;
   text-decoration: none;
+}
+.tableros:hover{
+  background-color: #147aa7;
+}
+nav .main-rigth button:hover{
+  background-color: #147aa7;
+}
+main ul li a:hover{
+  background-color: #147aa7;
 }

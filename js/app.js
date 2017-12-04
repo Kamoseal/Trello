@@ -6,8 +6,7 @@ var xButton = document.getElementById('x-button');
 var taskInput = document.createElement('input');
 var taskInputId = document.getElementById('task-input')
 
-//
-
+//Enfocando "añadir lista"
 nameListInput.addEventListener('focus', afterFocus);
 saveButton.addEventListener('click', saveNameList);
 xButton.addEventListener('click', prevention)
