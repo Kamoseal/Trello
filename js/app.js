@@ -17,7 +17,7 @@ function afterFocus(e) {
     e.preventDefault();
     taskBox.classList.add('box-list-focus')
     saveButton.classList.replace('none', 'inline-block');
-    xButton.classList.replace('none', 'inline-block');
+    xButton.classList.replace('none', 'close'); //cambie la clase inline-block a close
 }
 
 function saveNameList(e) {
@@ -28,7 +28,7 @@ function saveNameList(e) {
     taskBox.appendChild(listTitle);
     taskBox.removeChild(nameListInput);
     this.classList.replace('inline-block', 'none');
-    xButton.classList.replace('inline-block', 'none')
+    xButton.classList.replace('close', 'none') //cambie la clase inline-block a close
     taskInput.setAttribute('id', 'task-input');
     taskInput.setAttribute('type', 'text');
     taskInput.setAttribute('placeholder', 'Añadir una tarjeta');
@@ -43,7 +43,7 @@ function saveNameList(e) {
     xxButton.appendChild(xxButtonText);
     taskBox.appendChild(xxButton);
     addButton.classList.add('none');
-    xxButton.classList.add('none');
+    xxButton.classList.add('close');//cambie la clase none a close
 
     addButton.addEventListener('click', function(e) {
         e.preventDefault()
@@ -60,7 +60,7 @@ function saveNameList(e) {
     taskInput.addEventListener('focus', function(e) {
         e.preventDefault();
         addButton.classList.replace('none', 'inline-block');
-        xxButton.classList.replace('none', 'inline-block')
+        xxButton.classList.replace('none', 'close') //cambie la clase inline-block a close
     })
 
 }

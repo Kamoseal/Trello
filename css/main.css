@@ -122,6 +122,42 @@ main ul li a{
   color: #FFFFFF;
   text-decoration: none;
 }
+main div #save-button{
+  background: #5aac44;
+  border: none;
+  border-radius: 10%;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  height: 35px;
+  margin: 5px;
+  width: 75px;
+}
+main div .inline-block{
+  background: #5aac44;
+  border: none;
+  border-radius: 10%;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  height: 35px;
+  margin: 5px;
+  width: 75px;
+}
+main div #x-button{
+  color: #797a7a;
+  background-color: inherit;
+  border: none;
+  height: 35px;
+  width: 15px;
+}
+main div close{
+  color: #797a7a;
+  background-color: grey;
+  border: none;
+  height: 35px;
+  width: 15px;
+}
 .tableros:hover{
   background-color: #147aa7;
 }
@@ -130,4 +166,10 @@ nav .main-rigth button:hover{
 }
 main ul li a:hover{
   background-color: #147aa7;
+}
+main div #save-button:hover{
+  background-color: #519839;
+}
+main div #x-button:hover{
+  color: black;
 }
