@@ -2,34 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="C:\Users\Invitado Laboratoria\Documents\Laboratoria\trello\css\main.css">
+    <link rel="stylesheet" href="css\main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="icon" type="image/gif" href="assets/images/logo-trello.png" heigth="50px" width="50px"/>
     <title>Trello</title>
   </head>
   <body>
+    <!--Barra de navegacion-->
     <nav id="main" >
+      <!--Seccion izquierda contiene: botón de Tableros, input de texto y titilo de aplicación-->
       <section class="main-left">
-      <button class="tableros" type="text" name="Tableros"><a class="tableros-img-text" href="#"><img src="http://dummyimage.com/15x15" alt="Icono Tableros"><!--Joy mete el font--> Tableros</a></button>
-      <input class="main-search" type="search" name="busqueda" value=""><button type="buttonsearch" name="button-search"><a class="button-search" href="#"><img src="http://dummyimage.com/15x15" alt="Icono busqueda"><!--Joy mete el font--></a></button>
-      <p class="title-trello"><img src="http://dummyimage.com/30x30" alt="Icono Trello">Trello</p>
+      <button class="tableros" type="text" name="Tableros"><a class="tableros-img-text" href="#"><i class="fa fa-trello" aria-hidden="true"></i> Tableros</a></button>
+      <input class="main-search" type="search" name="busqueda" value=""><button type="buttonsearch" name="button-search"><a class="button-search" href="#"><i class="fa fa-search" aria-hidden="true"></i></a></button>
+      <img src="assets/images/trello-logo.jpg" heigth="31px" width="83px" alt="Icono Trello" class="title-trello"/>
       </section>
+      <!--Seccion derecha contiene: botones de usabilidad-->
       <section class="main-rigth">
-        <button class="button-more" type="button" name="more"><a href="#"><!--Joy mete el font--></a></button>
-        <button class="button-info" type="button" name="info"><a href="#"><!--Joy mete el font--></a></button>
-        <button class="button-bell" type="button" name="bell"><a href="#"><!--Joy mete el font--></a></button>
-        <button class="button-user-name" type="button" name="user-name"><a href="#"><!--Joy mete el font--></a></button>
+        <button class="button-more" type="button" name="more"><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></button>
+        <button class="button-info" type="button" name="info"><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a></button>
+        <button class="button-bell" type="button" name="bell"><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a></button>
+        <button class="button-user-name" type="button" name="user-name"><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></button>
       </section>
     </nav>
+    <!--Conenido principal. Opciones de uso para el usuario-->
     <main id="main-child">
       <ul class="main-child-left">
         <li class="name-tablero"><a href="#">Tablero Retos de código</a></li>
-        <li><a href="#"><img src="http://dummyimage.com/15x15" alt="Icono Start"><!--Joy mete el font--></a></li>
+        <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
         <li>|</li>
         <li><a href="#">Vida privada</a></li>
         <li>|</li>
-        <li><a href="#"><img src="http://dummyimage.com/15x15" alt="Icono candado"> Privado</a></li>
+        <li><a href="#"><i class="fa fa-lock" aria-hidden="true"></i> Privado</a></li>
         <li class="main-child-righ"><a href="#">··· Mostrar menú</a></li >
       </ul>
+      <div id="task-box" class="box-list">
+          <input type="text" placeholder="Añadir una lista..." id="add-name-list" class="block">
+          <!-- disabled="true" -->
+          <button id="save-button" class="none">Guardar</button>
+          <button id="x-button" class="none">X</button>
+      </div>
     </main>
+
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
