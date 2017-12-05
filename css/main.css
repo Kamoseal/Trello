@@ -26,8 +26,14 @@ li{
   width: 100%;
 }
 #add-name-list {
-    z-index: 1;
-    background: #006BA3;
+  background-color: #026aa7;
+  border: none;
+  border-radius: 5%;
+  color: #FFFFFF;
+  font-style: normal;
+  height: 35px;
+  width: 255px;
+  z-index: 1;
 }
 /*margenes de botón de Tableros, input de texto y titilo de aplicación*/
 .main-left{
@@ -95,34 +101,70 @@ li{
     z-index: 0;
 }
 .block {
+    background-color: #FFFFFF;
+    border: none;
+    color: black;
+    font-style: normal;
     display: block;
+    z-index: 1;
 }
 .none {
     display: none;
 }
-/*posicionamiento de botones en barra de navegacion*/
-nav .main-rigth button{
-  background: #4D96BB;
-  border: none;
-  border-radius: 5px;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
+.nonex {
+    display: none;
 }
-/* decoracion y posicionamiento de imagen dentro del botón en barra de navegación*/
-nav section button a{
+/*clase color de letra. uso en inputs*/
+.white-letter {
   color: white;
-  height: 23px;
+}
+
+/*clase para dar color de letra blanco a todos los placeholder*/
+::placeholder {
+  color: white;
+}
+
+/*clase para dar tamaño y color a TITULO impresO*/
+.title-card-size {
+  height: auto;
+  max-width: 300px;
+  background: #E2E4E6;
+  max-height: max-content;
+  border-radius: 5px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*esta clase hace que el texto se ajuste al ancho del div y y el height se adapta al tamaño del contenido*/
+.title-text-size {
   margin: 0;
-  text-decoration: none;
-  width: 22px;
+  max-width: 300px;
+  max-height: max-content;
+  word-wrap: break-word;
+  padding: 10px 10px;
 }
-/*decoracion de link*/
-main ul li a{
-  color: #FFFFFF;
-  text-decoration: none;
+
+/*clase para dar tamaño y color a tarjeta impresa*/
+.card-size {
+  height: auto;
+  max-width: 300px;
+  background: white;
+  max-height: max-content;
+  border-radius: 2px;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-main div #save-button{
+
+.text-size {
+  margin: 0;
+  max-width: 300px;
+  max-height: max-content;
+  word-wrap: break-word;
+  padding: 10px 10px;
+}
+#save-button{
   background: #5aac44;
   border: none;
   border-radius: 10%;
@@ -132,6 +174,28 @@ main div #save-button{
   height: 35px;
   margin: 5px;
   width: 75px;
+}
+/*decoracion de link*/
+main ul li a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+/* decoracion y posicionamiento de imagen dentro del botón en barra de navegación*/
+nav section button a{
+  color: white;
+  height: 23px;
+  margin: 0;
+  text-decoration: none;
+  width: 22px;
+}
+/*posicionamiento de botones en barra de navegacion*/
+nav .main-rigth button{
+  background: #4D96BB;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
 }
 main div .inline-block{
   background: #5aac44;
@@ -144,22 +208,40 @@ main div .inline-block{
   margin: 5px;
   width: 75px;
 }
-main div #x-button{
+main div .nonex{
   color: #797a7a;
   background-color: inherit;
   border: none;
   height: 35px;
   width: 15px;
 }
-main div close{
+main div .close{
   color: #797a7a;
-  background-color: grey;
+  background-color: inherit;
   border: none;
   height: 35px;
   width: 15px;
 }
+main div{
+  margin: 15px;
+}
+#save-button:hover{
+  background-color: #519839;
+}
+#x-button:hover{
+  color: black;
+}
+#add-name-list:hover {
+  background-color: #0a5784;
+}
 .tableros:hover{
   background-color: #147aa7;
+}
+main div .none:hover { /*no funciona el hover, revisar*/
+  background-color: #519839;
+}
+main div .nonex:hover {
+  color: black;
 }
 nav .main-rigth button:hover{
   background-color: #147aa7;
@@ -167,9 +249,9 @@ nav .main-rigth button:hover{
 main ul li a:hover{
   background-color: #147aa7;
 }
-main div #save-button:hover{
+main div .inline-block{
   background-color: #519839;
 }
-main div #x-button:hover{
+main div .close:hover{
   color: black;
 }
