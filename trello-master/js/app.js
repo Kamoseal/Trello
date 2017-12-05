@@ -60,12 +60,7 @@ function saveNameList(e) {
     taskInput.setAttribute('placeholder', 'Añadir una tarjeta');
     //Agregando al elemento taskInput la clase block
     taskInput.classList.add('block')
-
-    //Añade clases de estilo a los inputs de tarea
-    taskInput.classList.add('task-input-style')
-    taskInput.classList.add('task-input-style:hover')
-
-    //Agregar al div task-box taskInput
+        //Agregar al div task-box taskInput
     taskBox.appendChild(taskInput);
     //nombrando variable que crea un elemento boton
     var addButton = document.createElement('button');
@@ -86,49 +81,29 @@ function saveNameList(e) {
     //agregando el button la clase none
     addButton.classList.add('none');
     //agregando el button la clase close
-    xxButton.classList.add('close');
-    //agregando clase alboton X la clase none
+    xxButton.classList.add('close'); //cambie la clase none a close
     xxButton.classList.add('none')
-    //al elemento input creado de nombre taskInput agregar el evento blur mediante la funcion noFocusTask
-    //taskInput.addEventListener('blur', noFocusTask)
-    //se nombra una funcion para el elemento (blur) de nombre noFocusTask
-    //function noFocusTask(e) {
-        //e.preventDefault()
-        //al boton "Añadir" se le agrega una clase none
-        //addButton.classList.add('none')
-        //al boton "x" se le agrega la clase none
-        //xxButton.classList.add('none')
-    //}
-    //la boton "X" se le aplica una funcion al evento click
+    taskInput.addEventListener('blur', noFocusTask)
+
+    function noFocusTask(e) {
+        e.preventDefault()
+        addButton.classList.add('none')
+        xxButton.classList.add('none')
+    }
     xxButton.addEventListener('click', function(e) {
         e.preventDefault()
-        //al xxButton se le agrega la clase none
         this.classList.add('none')
-        //al boton Añadir se le agrega la clase
         addButton.classList.add('none')
     })
-    //al boton añadir se le agrega el evento mousedown con una funcion
     addButton.addEventListener('mousedown', function(e) {
         e.preventDefault()
-        //Creando un div con nombre de variable nameContainer
         var nameContainer = document.createElement('div');
-        //Creando un p con nombre de variable nameTask
         var nameTask = document.createElement('p')
-        //Creando una variable que contiene input.value
         var nameTaskText = document.createTextNode(taskInput.value);
-        //Creando un elemento button con nombre de variable xxxButton
         var xxxButton = document.createElement('button')
-        //agregandole un nodo de texto a xxxButtonText
         var xxxButtonText = document.createTextNode('x')
-        //Agregando nodo de texto a elemento button y colocando el button dentro de un div
         xxxButton.appendChild(xxxButtonText)
         nameContainer.appendChild(xxxButton)
-        //Crear clase de estilo de boton, eliminar tarea
-        xxxButton.classList.add('delet-task-button-style');
-        //Crear clase de estilo de boton hoover, eliminar tarea
-        xxxButton.classList.add('delet-task-button-style:hover');
-
-        //Dandole funcionalidad al xxxButton para eliminar
         xxxButton.addEventListener('click', function(e) {
                 this.parentNode.remove();
             })
@@ -137,16 +112,13 @@ function saveNameList(e) {
         nameTask.appendChild(nameTaskText);
         //taskBox.prepend(nameTask);
         taskBox.insertBefore(nameContainer, taskInput) //si se rompe es por esto
-        //Se les agrega la clases a los siguientes elementos
         nameContainer.classList.add('card-size');
-
         nameTask.classList.add('text-size');
         addButton.classList.add('none');
         xxButton.classList.add('none');
         taskInput.value = ''
         taskInput.setAttribute('placeholder', 'Añadir tarea');
     });
-    //Dandole funcionalidad al evento focus
     taskInput.addEventListener('focus', function(e) {
         e.preventDefault();
         addButton.classList.replace('none', 'inline-block');
@@ -155,7 +127,7 @@ function saveNameList(e) {
 
 }
 
-// a la funcion no focus se se le da a un evento
+
 function noFocus(e) {
     e.preventDefault();
     saveButton.classList.add('none')
