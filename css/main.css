@@ -206,6 +206,17 @@ li {
   margin: 10px 10px;
   transition: 10ms ease;
 }
+.buttonadd{
+    background: #5aac44;
+    border: none;
+    border-radius: 10%;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    height: 35px;
+    margin: 15px;
+    width: 75px;
+}
 /*decoracion de link*/
 main ul li a {
     color: #FFFFFF;
@@ -298,4 +309,7 @@ main div .close:hover {
   border: 1px solid #797a7a;
   color: white;
   background: #797a7a;
+}
+.buttonadd:hover{
+  background-color: #519839;
 }

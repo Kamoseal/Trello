@@ -13,7 +13,7 @@ saveButton.addEventListener('mousedown', saveNameList);
 //Evento al boton X que hara la funcion prevention
 xButton.addEventListener('click', prevention)
 nameListInput.addEventListener('blur', noFocus)
-
+saveButton.classList.add('buttonadd');
 
 
 //funcion para convertir los ID taskBox en clase y remplazando saveButton - xButton por otro nombre de clases
@@ -71,6 +71,7 @@ function saveNameList(e) {
     var addButton = document.createElement('button');
     //creando variable que añada un nodo de texto
     var addButtonText = document.createTextNode('Añadir');
+    addButton.classList.add('buttonadd');
     //añadiendo el nodo de texto al elemento button
     addButton.appendChild(addButtonText);
     //añadiendo al DIV el elemento button con el nodo de texto añadir
@@ -84,46 +85,46 @@ function saveNameList(e) {
     //añadiendo al div task-box el boton
     taskBox.appendChild(xxButton);
     //agregando el button la clase none
-    addButton.classList.add('none');
+    //addButton.classList.add('none');
     //agregando el button la clase close
     xxButton.classList.add('close');
     //agregando clase alboton X la clase none
-    xxButton.classList.add('none')
+    //xxButton.classList.add('none')
     //al elemento input creado de nombre taskInput agregar el evento blur mediante la funcion noFocusTask
     //taskInput.addEventListener('blur', noFocusTask)
     //se nombra una funcion para el elemento (blur) de nombre noFocusTask
     //function noFocusTask(e) {
-        //e.preventDefault()
-        //al boton "Añadir" se le agrega una clase none
-        //addButton.classList.add('none')
-        //al boton "x" se le agrega la clase none
-        //xxButton.classList.add('none')
+    //e.preventDefault()
+    //al boton "Añadir" se le agrega una clase none
+    //addButton.classList.add('none')
+    //al boton "x" se le agrega la clase none
+    //xxButton.classList.add('none')
     //}
     //la boton "X" se le aplica una funcion al evento click
     xxButton.addEventListener('click', function(e) {
-        e.preventDefault()
-        //al xxButton se le agrega la clase none
-        this.classList.add('none')
-        //al boton Añadir se le agrega la clase
-        addButton.classList.add('none')
-    })
-    //al boton añadir se le agrega el evento mousedown con una funcion
+            e.preventDefault()
+                //al xxButton se le agrega la clase none
+                //this.classList.add('none')
+                //al boton Añadir se le agrega la clase
+                // addButton.classList.add('none')
+        })
+        //al boton añadir se le agrega el evento mousedown con una funcion
     addButton.addEventListener('mousedown', function(e) {
         e.preventDefault()
-        //Creando un div con nombre de variable nameContainer
+            //Creando un div con nombre de variable nameContainer
         var nameContainer = document.createElement('div');
         //Creando un p con nombre de variable nameTask
         var nameTask = document.createElement('p')
-        //Creando una variable que contiene input.value
+            //Creando una variable que contiene input.value
         var nameTaskText = document.createTextNode(taskInput.value);
         //Creando un elemento button con nombre de variable xxxButton
         var xxxButton = document.createElement('button')
-        //agregandole un nodo de texto a xxxButtonText
+            //agregandole un nodo de texto a xxxButtonText
         var xxxButtonText = document.createTextNode('x')
-        //Agregando nodo de texto a elemento button y colocando el button dentro de un div
+            //Agregando nodo de texto a elemento button y colocando el button dentro de un div
         xxxButton.appendChild(xxxButtonText)
         nameContainer.appendChild(xxxButton)
-        //Crear clase de estilo de boton, eliminar tarea
+            //Crear clase de estilo de boton, eliminar tarea
         xxxButton.classList.add('delet-task-button-style');
         //Crear clase de estilo de boton hoover, eliminar tarea
         xxxButton.classList.add('delet-task-button-style:hover');
@@ -137,12 +138,12 @@ function saveNameList(e) {
         nameTask.appendChild(nameTaskText);
         //taskBox.prepend(nameTask);
         taskBox.insertBefore(nameContainer, taskInput) //si se rompe es por esto
-        //Se les agrega la clases a los siguientes elementos
+            //Se les agrega la clases a los siguientes elementos
         nameContainer.classList.add('card-size');
 
         nameTask.classList.add('text-size');
-        addButton.classList.add('none');
-        xxButton.classList.add('none');
+        //addButton.classList.add('none');
+        //xxButton.classList.add('none');
         taskInput.value = ''
         taskInput.setAttribute('placeholder', 'Añadir tarea');
     });
